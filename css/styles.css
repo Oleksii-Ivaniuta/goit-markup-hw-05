@@ -28,6 +28,11 @@ img {
   display: block;
 }
 
+input {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
 /*General tags*/
 
 /*General clases*/
@@ -441,6 +446,7 @@ nav a {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  margin-right: 80px;
 }
 .footer-container {
   display: flex;
@@ -471,6 +477,72 @@ nav a {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
+}
+
+.subscribe-form-label{
+display: flex;
+flex-direction: column;
+gap: 16px;
+justify-content: center;
+align-items: flex-start;
+color: #fff;
+font-weight: 500;
+font-size: 16px;
+line-height: 1,50;
+letter-spacing: 0.02em;
+}
+
+.subscribe-email
+{
+font-weight: 400;
+font-size: 12px;
+line-height: 200%;
+letter-spacing: 0.04em;
+color: #fff;
+background-color: inherit;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+border: 1px solid #fff;
+border-radius: 4px;
+width: 264px;
+height: 40px;
+margin-right: 24px;
+padding: 8px 16px;
+outline: none;
+}
+
+
+.subscribe-form-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe-btn {
+border-radius: 4px;
+padding: 8px 24px;
+width: 165px;
+height: 40px;
+background: #4d5ae5;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+font-weight: 500;
+font-size: 16px;
+line-height: 1,5;
+letter-spacing: 0.04em;
+text-align: center;
+color: #fff;
+border: none;
+margin-right: -48px;
+transition-property: background-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover {
+  background-color: #404bbf;
 }
 
 /*footer*/
