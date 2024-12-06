@@ -514,16 +514,26 @@ nav a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .close-form-btn .icon{
 fill: #2e2f42;
+transition-property: fill, border;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 250ms;
 }
 
-.close-form-btn:hover,
-.close-form-btn:hover .icon {
+.close-form-btn:hover, 
+.close-form-btn:focus {
   background-color: #404bbf;
   border: none;
+}
+
+.close-form-btn:hover .icon, 
+.close-form-btn:focus .icon {
   fill: #fff;
 }
 
@@ -557,9 +567,17 @@ justify-content: center;
 align-items: center;
 padding: 8px 16px;
 }
-.input-wrap .icon {
+.modal-form-icon-wrap {
+  width: 18px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 4px;
-  fill: #2e2f42;
+}
+
+.modal-form-icon-wrap .icon {
+fill: #2e2f42;
 }
 
 .form-input {
@@ -571,6 +589,17 @@ font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.04em;
 }
+
+.form-label:focus-within
+.input-wrap {
+border-color: #4d5ae5;
+}
+
+.form-label:focus-within
+.icon {
+fill: #4d5ae5;
+}
+
 
 .form-input::placeholder {
 color: rgba(46, 47, 66, 0.4);}
@@ -668,5 +697,13 @@ color: #fff;
 margin: 0 auto;
 width: 169px;
 cursor: pointer;
+  transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.send-form-btn:hover,
+.send-form-btn:focus {
+background-color: #404bbf;
 }
 /*Modal window*/
