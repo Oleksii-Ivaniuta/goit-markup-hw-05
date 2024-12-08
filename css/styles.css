@@ -730,26 +730,7 @@ nav a {
   margin-bottom: 16px;
 }
 
-.terms-label {
-  display: flex;
-  align-items: center;
-}
-
-.terms-label p {
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-
-.privacy-policy {
-  line-height: 1.33;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
-}
-
-.terms-field {
+.terms-field-wrap {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -757,41 +738,46 @@ nav a {
   margin-bottom: 24px;
 }
 
-.check-icon-box {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-right: 8px;
-  margin-left: -13px;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.terms-checkbox {
-  opacity: 0;
+.user-privacy-input {
   cursor: pointer;
 }
 
-.check-icon {
-  fill: none;
-  transition-property: fill;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+.user-privacy-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.modal-form input[type='checkbox']:checked + label svg {
-  fill: #fff;
-}
-.modal-form input[type='checkbox']:checked + label div {
+.user-privacy-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  background-color: transparent;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form input[type='checkbox']:checked + label span {
   background-color: #404bbf;
+  fill: #f4f4fd;
   border: none;
+}
+
+.pp-link {
+  color: #4d5ae5;
+  margin-left: 4px;
 }
 
 .send-form-btn {
@@ -800,9 +786,7 @@ nav a {
   border: none;
   background-color: #4d5ae5;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -810,7 +794,7 @@ nav a {
   text-align: center;
   color: #fff;
   margin: 0 auto;
-  width: 169px;
+  min-width: 169px;
   cursor: pointer;
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
