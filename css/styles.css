@@ -6,8 +6,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   background-color: #fff;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 h1,
@@ -204,6 +202,8 @@ nav a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
